@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CP=target/2014-JavaMemory-1.0-SNAPSHOT.jar:$HOME/.m2/repository/org/apache/commons/commons-lang3/3.3/commons-lang3-3.3.jar
+
+mainclass=$1
+if test -z $mainclass; then
+  echo "Usage: $0 mainclass"
+  echo "    org.cesken.talks.memory.Worker"
+  exit 1
+fi
+
+echo "Running: $mainclass ----------------------------------------------------------"
+java -cp $CP $mainclass
+echo "Done: $mainclass ----------------------------------------------------------"
