@@ -1,0 +1,3 @@
+#!/bin/bash
+
+jcha-gui worker4-*  -s AbsSize -C Worker '[C' '[B' java.util.HashMap 'java.util.HashMap$Entry'
